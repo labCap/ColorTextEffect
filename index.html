@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_rem.css">
     <link rel="stylesheet" href="style.css">
     <title>color</title>
 </head>
 
 <body>
     <div class="wrapper">
+        <label for="input-color" class="text-label">Enter the color or color name(hex, rgb, rgba, ...)</label>
+        <input type="text" class="input-color" id="input-color" placeholder="Type here">
+
         <div class="text">blue</div>
 
-        <button class="random-color-btn">Random color</button>
+        <button class="color-btn color-btn-add">Add color</button>
+        <button class="color-btn color-btn-random">Random color</button>
     </div>
     <script src="script.js"></script>
 </body>

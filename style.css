@@ -3,7 +3,6 @@
 body {
   padding: 0;
   margin: 0;
-  color: #fff;
   font-family: "Roboto Mono", monospace;
   text-transform: capitalize;
   font-weight: 700;
@@ -13,16 +12,21 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .text {
+  color: #fff;
   font-size: 100px;
   text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
 }
 
-.random-color-btn {
+.color-btn {
+  margin: 10px;
+  background: transparent;
+  color: #fff;
   text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
   border: 0;
   padding: 20px;
@@ -32,7 +36,8 @@ body {
   position: relative;
 }
 
-.random-color-btn::before {
+.color-btn::before,
+.input-color::before {
   content: "";
   position: absolute;
   /* z-index: -1; */
@@ -41,13 +46,39 @@ body {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
 }
-.random-color-btn:active::before {
+.color-btn:active::before,
+.input-color::before {
   box-shadow: 2px 2px 2px rgb(0, 0, 0, 0);
 }
 
-.random-color-btn:active {
-  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3) inset;
+.random-color-btn:active,
+.input-color:focus {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) inset;
+  border: 0;
+}
+
+.input-color {
+  margin: 10px;
+  background: transparent;
+  border: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.input-color::placeholder {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.text-label {
+  color: #fff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+  font-size: 30px;
 }
