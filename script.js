@@ -44,8 +44,8 @@ colorAddBtn.addEventListener("click", () => {
       textLabel.style.cssText = `color: ${inputColorValue};`;
       text.style.cssText = `color: ${inputColorValue};`;
       thisColorBtn.style.cssText = `
-    background: ${inputColorValue};
-      color: ${inputColorValue};
+        background: ${inputColorValue};
+        color: ${inputColorValue};
       `;
     }
 

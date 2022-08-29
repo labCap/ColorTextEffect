@@ -71,6 +71,7 @@ body {
   border-radius: 10px;
   transition: all 0.2s ease;
   position: relative;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .input-color::placeholder {
@@ -90,4 +91,23 @@ body {
   align-items: center;
   justify-content: center;
   background: #fef2e6;
+}
+
+@media (max-width: 425px) {
+  .text-label {
+    font-size: 17px;
+    text-align: center;
+  }
+  .input-color {
+    width: 300px;
+    height: 50px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .color-btn {
+    padding: 10px;
+  }
 }
