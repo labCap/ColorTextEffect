@@ -4,6 +4,9 @@ body {
   padding: 0;
   margin: 0;
   color: #fff;
+  font-family: "Roboto Mono", monospace;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
 .wrapper {
@@ -16,7 +19,35 @@ body {
 
 .text {
   font-size: 100px;
-  font-family: "Roboto Mono", monospace;
-  text-transform: capitalize;
   text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+}
+
+.random-color-btn {
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+  border: 0;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.random-color-btn::before {
+  content: "";
+  position: absolute;
+  /* z-index: -1; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+.random-color-btn:active::before {
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0);
+}
+
+.random-color-btn:active {
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3) inset;
 }
