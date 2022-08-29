@@ -93,7 +93,7 @@ body {
   background: #fef2e6;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .text-label {
     font-size: 17px;
     text-align: center;
