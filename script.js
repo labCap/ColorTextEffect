@@ -9,17 +9,19 @@ const wrapper = document.querySelector(".wrapper"),
 let colors = ["rgb(255, 151, 151)", "rgb(151, 255, 165)", "rgb(151, 196, 255)"];
 
 colorRandomBtn.addEventListener("click", () => {
-  let randomColor = Math.floor(Math.random() * colors.length);
+  let randomColor1 = Math.floor(Math.random() * 255);
+  let randomColor2 = Math.floor(Math.random() * 255);
+  let randomColor3 = Math.floor(Math.random() * 255);
 
   for (let i = 0; i < colorBtn.length; i++) {
     const thisColorBtn = colorBtn[i];
 
-    wrapper.style.cssText = `background: ${colors[randomColor]};`;
-    textLabel.style.cssText = `color: ${colors[randomColor]};`;
-    text.style.cssText = `color: ${colors[randomColor]};`;
+    wrapper.style.cssText = `background: rgb(${randomColor1},${randomColor2},${randomColor3});`;
+    textLabel.style.cssText = `color: rgb(${randomColor1},${randomColor2},${randomColor3});`;
+    text.style.cssText = `color: rgb(${randomColor1},${randomColor2},${randomColor3});`;
     thisColorBtn.style.cssText = `
-      background: ${colors[randomColor]};
-      color: ${colors[randomColor]};
+      background: rgb(${randomColor1},${randomColor2},${randomColor3});
+      color: rgb(${randomColor1},${randomColor2},${randomColor3});
     `;
   }
 
