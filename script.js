@@ -3,8 +3,8 @@ const wrapper = document.querySelector(".wrapper"),
   textLabel = document.querySelector(".text-label"),
   colorBtn = document.querySelectorAll(".color-btn"),
   colorRandomBtn = document.querySelector(".color-btn-random"),
-  colorAddBtn = document.querySelector(".color-btn-add");
-// inputColor = document.querySelector(".input-color");
+  colorAddBtn = document.querySelector(".color-btn-add"),
+  inputColor = document.querySelector(".input-color");
 
 let colors = ["rgb(255, 151, 151)", "rgb(151, 255, 165)", "rgb(151, 196, 255)"];
 
@@ -30,6 +30,12 @@ colorAddBtn.addEventListener("click", () => {
   let inputColorValue = document.querySelector(".input-color").value;
 
   if (inputColorValue) {
+    if (inputColorValue === "/cat") {
+      wrapper.innerHTML = `
+      <div class="gif" ><img src="cat.gif" alt=""></div>
+      `;
+    }
+
     colors.push(inputColorValue);
     for (let i = 0; i < colorBtn.length; i++) {
       const thisColorBtn = colorBtn[i];
@@ -42,7 +48,7 @@ colorAddBtn.addEventListener("click", () => {
       color: ${inputColorValue};
       `;
     }
+
     inputColor.value = "";
-  } else {
   }
 });
